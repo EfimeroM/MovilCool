@@ -1,0 +1,70 @@
+/* Card */
+
+.item-card {
+  font-family: var(--mainFont);
+  background-color: var(--blueColor);
+  border-radius: 1.9rem;
+  width: 22rem;
+  height: 34rem;
+  font-size: 5rem;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+}
+
+/* ---- */
+
+/* Card white side */
+
+.item-card__cell_info {
+  height: 29.1rem;
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1.4rem;
+  border: 0.1rem solid #e5e5e5;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.item-cell_info__img {
+  width: 13.2rem;
+  height: 16.7rem;
+  object-fit: cover;
+  margin-top: 2rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.item-cell_info__name {
+  font-size: 1.8rem;
+}
+
+.item-cell_info__characteristics {
+  font-size: 1.3rem;
+}
+
+/* --------------- */
+
+/* Card cell name */
+
+.item-card__view {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.item-card__view button {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background-color: var(--blueColor);
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.item-card__view button:hover {
+  text-decoration: underline;
+}
+
+/* -------------- */

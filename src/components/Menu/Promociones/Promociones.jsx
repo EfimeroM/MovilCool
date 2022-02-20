@@ -1,29 +1,29 @@
 import React, { useState, useEffect, useContext } from 'react'
-import ItemList from "./ItemList/ItemList";
+import ItemList from "../ItemListContainer/ItemList/ItemList";
 import { useParams } from 'react-router-dom';
 import SideBar from '../SideBar/SideBar';
-import { FilterContext } from "../../../Context/FilterContext";
 import { ProductContext } from "../../../Context/ProductContext";
+import { FilterContext } from "../../../Context/FilterContext";
 
 //Styles
-import './ItemListContainer.css';
+import '../ItemListContainer/ItemListContainer.css';
 
-const ItemListContainer = () => {
-  const { marca } = useContext(FilterContext);
+const Promociones = () => {
   const { getFetch } = useContext(ProductContext);
+  const { marca } = useContext(FilterContext);
   const [productos, setProductos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     (marca) ?
       getFetch
-        .then(result => setProductos(result.filter(producto => producto.categoria === id && producto.marca === marca)))
+        .then(result => setProductos(result.filter(producto => producto.promocion && producto.marca === marca)))
         .catch(err => err)
       :
       getFetch
-        .then(result => setProductos(result.filter(producto => producto.categoria === id)))
+        .then(result => setProductos(result.filter(producto => producto.promocion)))
         .catch(err => err)
-  }, [id, marca]);
+  },[id, marca]);
 
   return (
     <div className='main-container' id='main-container'>
@@ -38,4 +38,4 @@ const ItemListContainer = () => {
   )
 }
 
-export default ItemListContainer;
+export default Promociones;

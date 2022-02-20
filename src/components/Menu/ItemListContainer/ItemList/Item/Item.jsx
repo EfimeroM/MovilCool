@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({producto}) => {
@@ -9,10 +10,15 @@ const Item = ({producto}) => {
       <figure className="item-card__cell_info">
         <img className="item-cell_info__img" src={imageUrl} alt="nombre"/>
         <figcaption className="item-cell_info__name">{nombre}</figcaption>
-        <figcaption className="item-cell_info__characteristics">{almacenamiento} gb</figcaption>
+        {
+        almacenamiento ?
+          <figcaption className="item-cell_info__characteristics">{almacenamiento} gb - {color}</figcaption>
+          :
+          <figcaption className="item-cell_info__characteristics">{color}</figcaption>  
+        }
       </figure>
       <div className="item-card__view">
-        <a href="">Ver producto</a>
+        <Link to={`/detalle/${id}`}><button>Ver producto</button></Link>
       </div>
     </section>
   )

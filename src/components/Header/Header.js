@@ -1,11 +1,12 @@
 import React from "react";
-import { Search } from "./Search/Search";
-import { Link } from "react-router-dom";
-import "./Header.scss";
+import { Search } from "../../components/Header/Search/Search";
 import { TopHeader } from "./TopHeader";
 import { BiUserCircle } from "react-icons/bi";
 import { FaShoppingCart } from "react-icons/fa";
-import { NavBar } from "./NavBar/NavBar";
+import { NavBar } from "../Header/NavBar/NavBar";
+import { Link } from "react-router-dom";
+
+import "./Header.scss";
 
 export const Header = () => {
   return (
@@ -13,7 +14,7 @@ export const Header = () => {
       <TopHeader />
       <div id="logo">
         <Link to={"/"}>
-          <img src="./img/logo/logo-movilcool-color.png" alt="movilcool" />
+          <img src="./img/logo/logo-movilcool-color.png" />
         </Link>
       </div>
       <Search />

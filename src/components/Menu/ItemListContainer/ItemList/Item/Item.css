@@ -49,14 +49,22 @@
 /* Card cell name */
 
 .item-card__view {
-  font-size: 1.8rem;
+  font-size: 3rem;
   text-align: center;
 }
 
-.item-card__view a {
+.item-card__view button {
   text-decoration: none;
   color: white;
   font-weight: 600;
+  background-color: var(--blueColor);
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.item-card__view button:hover {
+  text-decoration: underline;
 }
 
 /* -------------- */

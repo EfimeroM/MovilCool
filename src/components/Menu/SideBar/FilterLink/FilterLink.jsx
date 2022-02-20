@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import { FilterContext } from "../../../../Context/FilterContext";
 
-const FilterLink = ({marca}) => {
+const FilterLink = ({marcaFiltrada, productos}) => {
+  const { handleClick } = useContext(FilterContext);
+
   return (
     <span className="filter_box__link">
-      <button className='link'>
-        {marca}
+      <button id='filterButton' className='link' onClick={handleClick}>
+        {marcaFiltrada}
       </button>
     </span>
   )

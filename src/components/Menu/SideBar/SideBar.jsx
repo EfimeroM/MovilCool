@@ -1,7 +1,10 @@
 import { GrFormClose } from "react-icons/gr";
 import { capitalizeWord } from "../../../helpers/CapitalizeWord/CapitalizeWord";
 import FilterLink from "./FilterLink/FilterLink";
+import { FilterContext } from "../../../Context/FilterContext";
+import { useContext } from "react";
 
+// Styles
 import "./SideBar.css";
 
 
@@ -36,28 +39,33 @@ function SideBar({id, productos}) {
 }
 
 const TagContainer = () => {
+	const { marca, removeTag } = useContext(FilterContext);
+
 	return (
 		<div className="tags_box__container">
-			{/* <span className="tag">
-				<span className="tag___box_icon">
-					<GrFormClose className="box_icon__icon"/>
-				</span>
-				<p className="tag_name">Apple</p>
-			</span> */}
+			{
+				(marca) &&
+					<span className="tag">
+						<span className="tag___box_icon">
+							<GrFormClose className="box_icon__icon" onClick={removeTag}/>
+						</span>
+						<p className="tag_name">{marca}</p>
+					</span>
+			}
 		</div>
 	);
 }
 
-
 const MarcasContainer = ({productos}) => {
-	const unique = [...new Set(productos.map(producto => producto.marca))]; 
-	console.log(unique);
+	let marcas = ['Apple','Samsung','Xiaomi','Huawei','One Plus', 'Oppo'];
+
+	// const unique = [...new Set(productos.map(producto => producto.marca))]; 
 
 	return (
 		<section className="container__filter_box">
 			<h5 className="filter_box__title">Marcas</h5>
 			{
-				unique.map(marca => <FilterLink marca={marca}/>)
+				marcas.map(marcaFiltrada => <FilterLink key={marcaFiltrada} marcaFiltrada={marcaFiltrada} productos={productos} />)
 			}
 		</section>
 	);

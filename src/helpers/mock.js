@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
   {
     id: 1,
     nombre: "iPhone 11",
@@ -8,8 +8,22 @@ const productos = [
     color: "Black",
     categoria: "celulares",
     marca: "Apple",
-    promocion: true,
+    promocion: false,
     destacado: false,
+    caracteristica: `
+      Lo que tenés que saber de este producto
+      Pantalla Retina HD de 4,7 pulgadas. 
+      Clasificación IP67 de resistencia al agua
+      Cámara gran angular de 12 MP con modo Retrato, Iluminación de Retrato,
+      Control de Profundidad, HDR Inteligente de última generación y video 4K.
+      Cámara frontal de 7 MP con modo Retrato, Iluminación de Retrato y Control de Profundidad. 
+      Touch ID para una autenticación segura. 
+      Chip A13 Bionic con Neural Engine de tercera generación.
+      Carga rápida.
+      Carga inalámbrica.
+      iOS 14 con widgets rediseñados en la pantalla de inicio, nueva
+      Biblioteca de Apps, App Clips y mucho más.
+      `,
   },
   {
     id: 2,
@@ -32,7 +46,7 @@ const productos = [
     color: "White",
     categoria: "celulares",
     marca: "Apple",
-    promocion: true,
+    promocion: false,
     destacado: true,
   },
   {
@@ -64,6 +78,7 @@ const productos = [
     id: 6,
     nombre: "AirTag",
     precio: 280,
+    almacenamiento: "",
     imageUrl:
       "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-single-select-202104_FMT_WHH?wid=532&hei=582&fmt=png-alpha&.v=1617761673000",
     color: "White",
@@ -76,6 +91,7 @@ const productos = [
     id: 7,
     nombre: "MagSafe",
     precio: 250,
+    almacenamiento: "",
     imageUrl:
       "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MM0Q3?wid=532&hei=582&fmt=png-alpha&.v=1629865186000",
     color: "Cuero",
@@ -85,14 +101,3 @@ const productos = [
     destacado: false,
   },
 ];
-
-export const getFetch = new Promise((resolve, reject) => {
-  let condition = true;
-  if (condition) {
-    setTimeout(() => {
-      resolve(productos);
-    }, 2000);
-  } else {
-    reject("error");
-  }
-});

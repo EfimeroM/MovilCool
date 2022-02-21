@@ -7,10 +7,18 @@ export const NavBar = () => {
   return (
     <div id="nav">
       <ul>
-        <li>Celulares</li>
-        <li>Accesorios</li>
-        <li>Promociones</li>
-        <li>Contacto</li>
+        <Link to="/catalogo/celulares" className="link">
+          <li>Celulares</li>
+        </Link>
+        <Link to="/catalogo/accesorios" className="link">
+          <li>Accesorios</li>
+        </Link>
+        <Link to="/menu/promociones" className="link">
+          <li>Promociones</li>
+        </Link>
+        <Link to="/contacto" className="link">
+          <li>Contacto</li>
+        </Link>
       </ul>
     </div>
   );

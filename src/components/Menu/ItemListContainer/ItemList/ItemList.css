@@ -1,0 +1,15 @@
+.item-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  flex-flow: row wrap;
+  margin: 100px auto;
+}
+
+.extralist-items {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  flex-flow: row;
+  margin: 100px auto;
+}

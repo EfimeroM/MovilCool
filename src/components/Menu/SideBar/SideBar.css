@@ -1,0 +1,118 @@
+/* Aside */
+
+.container__SideBar {
+  width: 30rem;
+  font-family: var(--mainFont);
+  margin-right: 1rem;
+  margin: 0 auto;
+}
+
+/* ----- */
+
+/* Main box accesories */
+
+.box__main_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: var(--blueColor);
+}
+
+.main_box__line {
+  width: 100%;
+  margin: 2rem 0;
+  border: 0.3rem solid var(--blueColor);
+}
+
+/* ------------------- */
+
+/* Tags box */
+
+.container__tags_box {
+  margin-bottom: 3.8rem;
+}
+
+.tags_box__title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tags_box__container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag {
+  margin: 0.5rem;
+  padding-top: 0.25rem;
+  background-color: #e3e2e2;
+  border-radius: 0.4rem;
+  width: 13.9rem;
+  height: 2.4rem;
+  text-align: center;
+}
+
+.tag___box_icon {
+  position: absolute;
+}
+
+.box_icon__icon {
+  position: relative;
+  top: 0.5rem;
+  left: 5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.box_icon__icon:hover {
+  cursor: pointer;
+  filter: invert(0%) sepia(9%) saturate(7485%) hue-rotate(164deg)
+    brightness(94%) contrast(99%);
+}
+
+.tag_name {
+  font-size: 1.4rem;
+  color: #727272;
+}
+
+/* -------- */
+
+/* Filter box */
+
+.container__filter_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.8rem;
+}
+
+.box__tags {
+  font-size: 1.4rem;
+}
+
+.filter_box__title {
+  font-size: 1.8rem;
+  color: var(--blueColor);
+}
+
+.filter_box__link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0.75rem 0rem 0.75rem 0rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #727272;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- */

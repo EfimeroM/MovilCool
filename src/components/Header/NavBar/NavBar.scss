@@ -1,0 +1,20 @@
+#nav {
+  color: #2d3781;
+  ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    .link {
+      font-weight: bold;
+      font-size: 2.5vh;
+      text-align: center;
+      width: 25%;
+      height: 50%;
+      text-decoration: none;
+      font-style: none;
+      color: #2d3781;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import { GrFormClose } from "react-icons/gr";
 import { capitalizeWord } from "../../../helpers/CapitalizeWord/CapitalizeWord";
-import FilterLink from "./FilterLink/FilterLink";
 import { FilterContext } from "../../../Context/FilterContext";
 import { useContext } from "react";
+import { MarcasLinks, ColoresLinks } from "../SideBar/FilterLink/FilterLink";
 
 // Styles
 import "./SideBar.css";
@@ -33,13 +33,14 @@ function SideBar({id, productos}) {
 			</section>
 
 			<MarcasContainer productos={productos}/>
+			<ColoresContainer productos={productos} />
 				
 		</aside>
 	);
 }
 
 const TagContainer = () => {
-	const { marca, removeTag } = useContext(FilterContext);
+	const { marca, removeMarcaTag, color, removeColorTag } = useContext(FilterContext);
 
 	return (
 		<div className="tags_box__container">
@@ -47,16 +48,25 @@ const TagContainer = () => {
 				(marca) &&
 					<span className="tag">
 						<span className="tag___box_icon">
-							<GrFormClose className="box_icon__icon" onClick={removeTag}/>
+							<GrFormClose className="box_icon__icon" onClick={removeMarcaTag}/>
 						</span>
 						<p className="tag_name">{marca}</p>
+					</span>
+			}
+			{
+				(color) &&
+					<span className="tag">
+						<span className="tag___box_icon">
+							<GrFormClose className="box_icon__icon" onClick={removeColorTag}/>
+						</span>
+						<p className="tag_name">{color}</p>
 					</span>
 			}
 		</div>
 	);
 }
 
-const MarcasContainer = ({productos}) => {
+const MarcasContainer = () => {
 	let marcas = ['Apple','Samsung','Xiaomi','Huawei','One Plus', 'Oppo'];
 
 	// const unique = [...new Set(productos.map(producto => producto.marca))]; 
@@ -65,7 +75,18 @@ const MarcasContainer = ({productos}) => {
 		<section className="container__filter_box">
 			<h5 className="filter_box__title">Marcas</h5>
 			{
-				marcas.map(marcaFiltrada => <FilterLink key={marcaFiltrada} marcaFiltrada={marcaFiltrada} productos={productos} />)
+				marcas.map(marcaFiltrada => <MarcasLinks key={marcaFiltrada} marcaFiltrada={marcaFiltrada} />)
+			}
+		</section>
+	);
+}
+const ColoresContainer = () => {
+	let colores = ['Red','Black','White','Gold','Rose Gold'];
+	return (
+		<section className="container__filter_box">
+			<h5 className="filter_box__title">Colores</h5>
+			{
+				colores.map(colorFiltrado => <ColoresLinks key={colorFiltrado} colorFiltrado={colorFiltrado} />)
 			}
 		</section>
 	);

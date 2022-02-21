@@ -9,21 +9,31 @@ import { ProductContext } from "../../../Context/ProductContext";
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
-  const { marca } = useContext(FilterContext);
+  const { marca, color } = useContext(FilterContext);
   const { getFetch } = useContext(ProductContext);
   const [productos, setProductos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
-    (marca) ?
+    if (marca) {
       getFetch
         .then(result => setProductos(result.filter(producto => producto.categoria === id && producto.marca === marca)))
         .catch(err => err)
-      :
+    } else if (color){
+      getFetch
+        .then(result => setProductos(result.filter(producto => producto.categoria === id && producto.color === color)))
+        .catch(err => err)
+    } else if (marca && color) {
+      getFetch
+        .then(result => setProductos(result.filter(producto => producto.categoria === id && producto.marca === marca && producto.color === color)))
+        .then(result => console.log(result.filter(producto => producto.categoria === id && producto.marca === marca && producto.color === color)))
+        .catch(err => err)
+    } else {
       getFetch
         .then(result => setProductos(result.filter(producto => producto.categoria === id)))
         .catch(err => err)
-  }, [id, marca]);
+    }
+  }, [id, marca, color]);
 
   return (
     <div className='main-container' id='main-container'>

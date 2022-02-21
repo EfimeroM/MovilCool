@@ -4,22 +4,36 @@ export const FilterContext = createContext([]);
 
 export const FilterContextProvider = ({children}) => {
   const [marca, setMarca] = useState('');
+  const [color, setColor] = useState('');
 
-  const handleClick = (e) => {
+  const handleMarcaClick = (e) => {
     e.preventDefault();
     setMarca(e.target.innerText);
 	}
 
-  const removeTag = () => {
+  const handleColorClick = (e) => {
+    e.preventDefault();
+    setColor(e.target.innerText);
+	}
+
+  const removeMarcaTag = () => {
 		setMarca('');
 	}
+  const removeColorTag = () => {
+    setColor('');
+	}
+
+
 
   return (
     <FilterContext.Provider value={{
-      handleClick,
+      handleMarcaClick,
+      handleColorClick,
       marca,
+      color,
       setMarca,
-      removeTag,
+      removeMarcaTag,
+      removeColorTag,
     }}>
       {children}
     </FilterContext.Provider>

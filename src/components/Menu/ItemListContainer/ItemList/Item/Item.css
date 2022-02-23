@@ -67,4 +67,9 @@
   text-decoration: underline;
 }
 
+.item-card__view a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
 /* -------------- */

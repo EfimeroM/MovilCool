@@ -1,5 +1,4 @@
 import Home from "./components/Home/Home";
-import { Banner } from "./components/Home/Banner/Banner";
 import ItemListContainer from "./components/Menu/ItemListContainer/ItemListContainer";
 import { FilterContextProvider } from "./Context/FilterContext";
 import { ProductContextProvider } from "./Context/ProductContext";
@@ -11,6 +10,7 @@ import ItemDetailContainer from "./components/Menu/ItemDetailContainer/ItemDetai
 
 // Style
 import "./index.css";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -25,7 +25,6 @@ function App() {
                 path="/"
                 element={
                   <>
-                    <Banner />
                     <Home />
                   </>
                 }
@@ -43,6 +42,7 @@ function App() {
                 element={<ItemDetailContainer />}
               />
             </Routes>
+            <Footer />
           </div>
         </BrowserRouter>
       </FilterContextProvider>

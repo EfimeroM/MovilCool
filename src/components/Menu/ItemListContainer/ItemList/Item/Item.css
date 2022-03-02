@@ -1,5 +1,8 @@
 /* Card */
-
+.item-card-box{
+  display: flex;
+  justify-content: center;
+}
 .item-card {
   font-family: var(--mainFont);
   background-color: var(--blueColor);

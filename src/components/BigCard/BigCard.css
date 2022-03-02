@@ -2,8 +2,13 @@
 
 .container__BigCard {
   font-family: var(--mainFont);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 2vh;
+  margin-top: -6vh;
 }
-
 /* -------------- */
 
 /* Container header */

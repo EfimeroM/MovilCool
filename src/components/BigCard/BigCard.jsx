@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BigCard.css";
-import img from './assets/iPhone.png'
 
-function BigCard() {
+function BigCard({nombre, color, imageUrl}) {
 	return (
 		<div className="container__BigCard">
+			<div className="ss">
 			<div className="BigCard__box_header">
 				<p className="box_header__title">Disponible hasta 24/07</p>
 			</div>
 			<div className="BigCard__box_content">
 				<section className="box_content__information">
-					<p className="information__box">iPhone 11</p>
+					<p className="information__box">{nombre}</p>
 					<section className="information__specifics">
 						<p>
-							<b>Color:</b> Gris Plata
+							<b>Color: </b>{color}
 						</p>
 						<p>
 							<b>Memoria:</b> 128gb
@@ -24,8 +24,9 @@ function BigCard() {
 					</p>
 				</section>
 				<figure className="box_content__image">
-					<img className="image_BigCard" src={img} alt="iPhone" />
+					<img className="image_BigCard" src={imageUrl} alt={nombre} />
 				</figure>
+			</div>
 			</div>
 		</div>
 	);

@@ -1,0 +1,56 @@
+#footer-box{
+    width: 100%;
+    height: 20vh;
+    #wsp-up{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40%;
+            width: 6vw;
+            .up{
+                height: 100%;
+                width: 100%;
+                color: orangered;
+            }
+        }
+        .wsp{
+            color: lime;
+            height: 60%;
+            width: 3vw;
+            margin: 0 4vw;
+        }
+    }
+    #footer{
+        width: 100%;
+        height: auto;
+        background-color: #2d3789;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10vh;
+        img{
+            width: 6vh;
+            height: 6vh;
+        }
+        #redes{
+            display: flex;
+            color: white;
+            align-items: center;
+            .icon-redes{
+                width: 3vh;
+                height: 3vh;
+                margin: 0 .4vw;
+            }
+            p{
+                font-size: 2vh;
+                margin-left: .8vw;
+                margin-top: 10px;
+            }
+        }
+    }
+}

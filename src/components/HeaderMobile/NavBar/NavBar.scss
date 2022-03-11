@@ -1,0 +1,120 @@
+$heigth-header : 50vh;
+#header-container{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    .header{
+        display: flex;
+        height: 100%;
+        .icon-menu{
+            width: 33.33%;
+            display: flex;
+            align-items: center;
+            .icon{
+                width: 5vh;
+                height: 5vh;
+                margin: 0 7vw;
+            }
+        }
+        .logo{
+            width: 33.33%;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .search{
+            width: 33.33%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .icon{
+                width: 5vh;
+                height: 5vh;
+                margin: 0 7vw;
+            }
+        }
+    }
+    #body-menu-container{
+        width: 100%;
+        height: 110vh;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: -100%;
+        #body-menu{
+            overflow-y: scroll;
+            width: 260px;
+            height: 100%;
+            position: absolute;
+            z-index: 4;
+            top: 0;
+            left: -100%;
+            transition: 400ms;
+            background-color: rgb(255, 255, 255);
+            .header{
+                width: 100%;
+                height: 100px;
+                border-bottom: 1px solid black;
+                display: flex;
+                justify-content: center;
+                position: sticky;
+                background-color: white;
+                top: 0;
+                .icon{
+                    width: 5vh;
+                    height: 5vh;
+                    padding: 1vw;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .body{
+                ul{
+                    padding: 2vh 4vh;
+                    border-bottom: 1px solid black;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        padding: 2vh 0;
+                        list-style: none;
+                        font-size: 15px;
+                        .icon{
+                            width: 20px;
+                            height: 20px;
+                        }
+                        div{
+                            height: 100%;
+                            padding: 0 10px;
+                        }
+                    }
+                    #redes{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 15px;
+                        }
+                        div{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            .icon-redes{
+                                width: 33.33%;
+                                font-size: 40px;
+                                padding: 5px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

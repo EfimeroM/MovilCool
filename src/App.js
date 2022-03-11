@@ -11,6 +11,7 @@ import ItemDetailContainer from "./components/Menu/ItemDetailContainer/ItemDetai
 // Style
 import "./index.css";
 import { Footer } from "./components/Footer/Footer";
+import { ResponsiveHeader } from "./helpers/ResponsiveHeader";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <FilterContextProvider>
         <BrowserRouter>
           <div className="App">
-            <Header />
+            <ResponsiveHeader />
             <Routes>
               <Route
                 exact

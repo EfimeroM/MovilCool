@@ -21,3 +21,10 @@
     margin-bottom: 6%;
   }
 }
+@media (max-width: 820px) {
+  #banner{
+    .product{
+      display: none;
+    }
+  }
+}

@@ -14,7 +14,7 @@ export const Header = () => {
       <TopHeader />
       <div id="logo">
         <Link to={"/"}>
-          <img src="./img/logo/logo-movilcool-color.png" />
+          <img src="./img/logo/logo-movilcool-color.png" alt="logo movilcool" />
         </Link>
       </div>
       <Search />

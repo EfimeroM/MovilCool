@@ -1,27 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Item.css';
+import './Item.scss';
 
 const Item = ({producto}) => {
   const {id, nombre, precio, almacenamiento, imageUrl, color, categoria} = producto;
 
   return (
-    <div className='item-card-box'>
-      <section className="item-card">
-        <figure className="item-card__cell_info">
-          <img className="item-cell_info__img" src={imageUrl} alt="nombre"/>
-          <figcaption className="item-cell_info__name">{nombre}</figcaption>
-          {
-          almacenamiento ?
-            <figcaption className="item-cell_info__characteristics">{almacenamiento} gb - {color}</figcaption>
-            :
-            <figcaption className="item-cell_info__characteristics">{color}</figcaption>  
-          }
-        </figure>
-        <div className="item-card__view">
-          <Link to={`/detalle/${id}`}><button>Ver producto</button></Link>
+    <div id='item-card-container'>
+        <div className='item-card-info'>
+            <div className='image'>
+                <img src={imageUrl} alt={nombre} />
+            </div>
+            <h1>{nombre}</h1>
+            {
+                almacenamiento?
+                <div>
+                    <h2>{almacenamiento} gb -</h2>
+                    <h2> {color}</h2>
+                </div>
+                :
+                <div>
+                    <h2>{color}</h2>
+                </div>
+            }
         </div>
-      </section>
+        <div className='item-card-ver'>
+            <div className='item-blue'>
+            </div>
+            <div className='item-transparente'>
+                <Link to={`/detalle/${id}`} className='link'><h2>Ver producto</h2></Link>
+            </div>
+        </div>
     </div>
   )
 }

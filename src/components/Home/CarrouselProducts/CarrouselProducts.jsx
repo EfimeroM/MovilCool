@@ -63,7 +63,7 @@ const CarrouselProducts = ({slidesToShow, filter}) => {
     
     return (
         <div className="carrousel-content">
-            <div className="title-carrousel">{filter}</div>
+            <div className="title-carrousel"><p>{filter}</p></div>
             {
                 loading===true?
                 <Loading />

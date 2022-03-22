@@ -70,3 +70,35 @@
         }
     }
 }
+
+@media (max-width: 1600px){
+    @media (min-height: 870px){
+        #bigcard-container{
+            height: 65vh;
+        }
+    }
+}
+@media (max-width: 1024px){
+    @media (min-height: 600px){
+        #bigcard-container{
+            height: 65vh;
+        }
+    }
+}
+@media (max-width: 425px){
+    #bigcard-container{
+        height: 50vh;
+        .bigcard-body-box{
+            .bigcard-body-data{
+                h1{
+                    font-size: 3vh;
+                }
+                div{
+                    h2{
+                        font-size: 2vh;
+                    }
+                }
+            }
+        }
+    }
+}

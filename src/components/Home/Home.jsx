@@ -13,15 +13,27 @@ const Home = () => {
         <Banner />
         {
         screenPc? //hasta 820px
+        <>
             <CarrouselProducts slidesToShow={3} filter={"Ofertas"} />
+            <CarrouselProducts slidesToShow={5} filter={"Destacados"} />
+            <CarrouselProducts slidesToShow={5} filter={"Celulares"} />
+            <CarrouselProducts slidesToShow={5} filter={"Accesorios"} />
+        </>
         :screenMobile? //hasta 450
+        <>
             <CarrouselProducts slidesToShow={1} filter={"Ofertas"} />
+            <CarrouselProducts slidesToShow={2} filter={"Destacados"} />
+            <CarrouselProducts slidesToShow={2} filter={"Celulares"} />
+            <CarrouselProducts slidesToShow={2} filter={"Accesorios"} />
+        </>
         : //intermedio
+        <>
             <CarrouselProducts slidesToShow={2} filter={"Ofertas"} />
+            <CarrouselProducts slidesToShow={3} filter={"Destacados"} />
+            <CarrouselProducts slidesToShow={3} filter={"Celulares"} />
+            <CarrouselProducts slidesToShow={3} filter={"Accesorios"} />
+        </>
         }
-        <CarrouselProducts slidesToShow={5} filter={"Destacados"} />
-        <CarrouselProducts slidesToShow={5} filter={"Celulares"} />
-        <CarrouselProducts slidesToShow={5} filter={"Accesorios"} />
         <br/><br/><br/>
     </>
     )

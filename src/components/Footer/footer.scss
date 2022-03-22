@@ -54,3 +54,41 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    #footer-box{
+        #wsp-up{
+            a{
+                height: 30%;
+            }
+            .wsp{
+                height: 70%;
+                width: 4vw;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    #footer-box{
+        #wsp-up{
+            a{
+                padding: 1vh;
+                height: 90%;
+                width: 15vw;
+            }
+            .wsp{
+                width: 19vw;
+                padding: 1vh;
+            }
+        }
+        #footer{
+            padding: 0 1vh;
+            #redes{
+                p{
+                    font-size: 1.5vh;
+                }
+            }
+        }
+    }
+}
+

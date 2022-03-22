@@ -1,0 +1,122 @@
+#item-card-container-carrousel{
+    width: 80%;
+    height: 47vh;
+    margin: 0 2vw;
+    .item-card-info{
+        width: 100%;
+        height: 83%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 70%;
+            }
+        }
+        h1{
+            padding: 1vh;
+            height: 10%;
+            font-size: 2.3vh;
+        }
+        div{
+            height: 10%;
+            display: flex;
+            h2{
+                font-size: 2vh;
+            }
+        }
+    }
+    .item-card-ver{
+        position: relative;
+        width: 100%;
+        height: 17%;
+        .item-blue{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(36, 36, 121);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-top: -2vh;
+        }
+        .item-transparente{
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            margin-top: -2vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            .link{
+                h2{
+                    color: white;
+                    text-decoration: none;
+                    padding: 1vh;
+                    font-size: 2.2vh;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    #item-card-container-carrousel{
+        margin: 0 4vw;
+    }
+    @media (min-height: 500px){
+        #item-card-container-carrousel{
+            height: 40vh;
+        .item-card-info{
+            .image{
+                height: 50%;
+                img{
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            h1{
+                height: 20%;
+            }
+        }
+
+        }
+    }
+    @media (max-height: 900px){
+        #item-card-container-carrousel{
+            height: 35vh;
+            .item-card-info{
+                h1{
+                    font-size: 2vh;
+                }
+                div{
+                    h2{
+                        font-size: 1.8vh;
+                    }
+                }
+            }
+            .item-card-ver{
+                .item-transparente{
+                    .link{
+                        h2{
+                            font-size: 1.8vh;
+                            padding: 0.5vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

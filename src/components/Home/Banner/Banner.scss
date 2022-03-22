@@ -20,11 +20,22 @@
     margin-left: 15%;
     margin-bottom: 6%;
   }
+  img{
+    width: 100%;
+  }
 }
 @media (max-width: 820px) {
   #banner{
     .product{
       display: none;
+    }
+  }
+}
+@media (max-width: 600px) {
+  #banner{
+    img{
+      width: 130%;
+      margin-left: -15%;
     }
   }
 }

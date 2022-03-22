@@ -1,10 +1,28 @@
 .carrousel-content{
     width: 100%;
-    padding: 3vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .title-carrousel{
+        width: 100%;
         color: #2d3781;
         font-weight: bold;
         font-size: 4vh;
-        padding: 0 3vw;
+        padding: 2vh 5.5vw;
+    }
+}
+.slider{
+    margin: 0;
+    padding: 0;
+    width: 92%;
+}
+@media (max-width: 450px){
+    .carrousel-content{
+        .title-carrousel{
+            font-size: 3vh;
+            padding: 1vh 9vw;
+        }
     }
 }

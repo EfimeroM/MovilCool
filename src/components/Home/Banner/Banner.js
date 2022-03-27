@@ -1,4 +1,5 @@
 import { Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./Banner.scss";
 
@@ -12,9 +13,11 @@ export const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <div class="product" id="iphone">
-            Ver productos
-          </div>
+            <Link to={"/catalogo/celulares"} style={{textDecoration:"none"}}>
+              <div class="product" id="iphone">
+                Ver productos
+              </div> 
+            </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -24,9 +27,11 @@ export const Banner = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <div class="product" id="shark">
-            Ver productos
-          </div>
+            <Link to={"/catalogo/celulares"} style={{textDecoration:"none"}}>
+              <div class="product" id="shark">
+                Ver productos
+              </div>
+            </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -36,9 +41,11 @@ export const Banner = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <div class="product" id="galaxy">
-            Ver productos
-          </div>
+            <Link to={"/catalogo/celulares"} style={{textDecoration:"none"}}>
+              <div class="product" id="galaxy">
+                Ver productos
+              </div>
+            </Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

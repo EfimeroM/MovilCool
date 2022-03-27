@@ -49,11 +49,11 @@ export const productos = [
     marca: "Apple",
     promocion: false,
     destacado: true,
-    oferta: true
+    oferta: true,
   },
   {
     id: 4,
-    nombre: "iPhone 13 chido",
+    nombre: "iPhone 13",
     precio: 800,
     almacenamiento: 128,
     imageUrl: "https://m.media-amazon.com/images/I/81Jf4uu-xzL._AC_SL1500_.jpg",

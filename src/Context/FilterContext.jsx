@@ -23,8 +23,6 @@ export const FilterContextProvider = ({children}) => {
     setColor('');
 	}
 
-
-
   return (
     <FilterContext.Provider value={{
       handleMarcaClick,

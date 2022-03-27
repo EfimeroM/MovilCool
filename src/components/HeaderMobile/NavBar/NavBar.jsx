@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillShopping } from "react-icons/ai";
 import { HiHome } from "react-icons/hi";
 import { FaMobileAlt, FaHeadphones, FaUserAlt, FaTiktok} from "react-icons/fa";
 import { FiPercent, FiMessageCircle} from "react-icons/fi";
 import { HiUserCircle, HiShoppingCart } from "react-icons/hi";
 import { RiInstagramFill, RiFacebookBoxFill } from "react-icons/ri";
-import './NavBar.scss'
+import './NavBar.scss';
 
 export const NavBar = () => {
     let count = 0 
@@ -52,11 +53,11 @@ export const NavBar = () => {
                 </div>
                 <div className="body">
                     <ul>
-                        <li><HiHome className='icon' /><div>Inicio</div></li>
-                        <li><FaMobileAlt className='icon' /><div>Celulares</div></li>
-                        <li><FaHeadphones className='icon' /><div>Accesorios</div></li>
-                        <li><FiPercent className='icon' /><div>Promociones</div></li>
-                        <li><FiMessageCircle className='icon' /><div>Contacto</div></li>
+                        <li><HiHome className='icon' /><Link to={"/"} className="mobile-link"><div>Inicio</div></Link></li>
+                        <li><FaMobileAlt className='icon' /><Link to="/catalogo/celulares" className="mobile-link"><div>Celulares</div></Link></li>
+                        <li><FaHeadphones className='icon' /><Link to="/catalogo/accesorios" className="mobile-link"><div>Accesorios</div></Link></li>
+                        <li><FiPercent className='icon' /><Link to="/menu/promociones" className="mobile-link"><div>Promociones</div></Link></li>
+                        <li><FiMessageCircle className='icon' /><Link to="/contacto" className="mobile-link"><div>Contacto</div></Link></li>
                     </ul>
                     <ul>
                         <li><HiUserCircle className='icon' /><div>Mi perfil</div></li>

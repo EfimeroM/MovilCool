@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import { consultarProductoWsp } from '../../../../helpers/whatsapp';
 import './ItemDetail.css';
 
 const ItemDetail = ({producto}) => {
@@ -43,7 +43,7 @@ const ItemDetail = ({producto}) => {
               <span className='span-color'>{color}</span>
             </section>
             <section className="info__payment">
-              <button className="payment__button">Comprar ahora</button>
+              <button onClick={()=>{consultarProductoWsp(`"${nombre}"`)}} className="payment__button">Comprar ahora</button>
             </section>
           </div>
         </div>

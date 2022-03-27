@@ -5,7 +5,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { FaShoppingCart } from "react-icons/fa";
 import { NavBar } from "../Header/NavBar/NavBar";
 import { Link } from "react-router-dom";
-
+import movilCoolColor from "../../img/logo/logo-movilcool-color.png"
 import "./Header.scss";
 
 export const Header = () => {
@@ -14,7 +14,7 @@ export const Header = () => {
       <TopHeader />
       <div id="logo">
         <Link to={"/"}>
-          <img src="./img/logo/logo-movilcool-color.png" alt="logo movilcool" />
+          <img src={movilCoolColor} alt="logo movilcool" />
         </Link>
       </div>
       <Search />

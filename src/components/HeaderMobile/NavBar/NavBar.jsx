@@ -6,6 +6,7 @@ import { FaMobileAlt, FaHeadphones, FaUserAlt, FaTiktok} from "react-icons/fa";
 import { FiPercent, FiMessageCircle} from "react-icons/fi";
 import { HiUserCircle, HiShoppingCart } from "react-icons/hi";
 import { RiInstagramFill, RiFacebookBoxFill } from "react-icons/ri";
+import movilcoolLogoColor from "../../../img/logo/logo-movilcool-color.png"
 import './NavBar.scss';
 
 export const NavBar = () => {
@@ -39,7 +40,9 @@ export const NavBar = () => {
                 <AiOutlineMenu className='icon' onClick={desplegarMenu}/>  
             </div>
             <div className="logo"> 
-                <img src="./img/logo/logo-movilcool-color.png"/>
+                <Link to={"/"}>
+                    <img src={movilcoolLogoColor}/>
+                </Link>
             </div>
             <div className="search"> 
                 <AiOutlineSearch className='icon'/>  
@@ -48,7 +51,7 @@ export const NavBar = () => {
         <div id="body-menu-container">
             <div id="body-menu">
                 <div className="header">
-                    <img src="./img/logo/logo-movilcool-color.png"/>
+                    <img src={movilcoolLogoColor}/>
                     <AiOutlineClose className='icon' onClick={desplegarMenu}/> 
                 </div>
                 <div className="body">
@@ -71,9 +74,15 @@ export const NavBar = () => {
                         <div id='redes' className='icon-text'>
                             <p>¡Siguenos en nuestras redes!</p>
                             <div>
-                                <FaTiktok className='icon-redes' />
-                                <RiInstagramFill className='icon-redes' />
-                                <RiFacebookBoxFill className='icon-redes' />
+                                <a href="/" target="blank">
+                                    <FaTiktok className='icon-redes' />
+                                </a>
+                                <a href="https://www.instagram.com/movilcool/" target="blank">
+                                    <RiInstagramFill className='icon-redes' />
+                                </a>
+                                <a href="https://www.facebook.com/MovilCool" target="blank">
+                                    <RiFacebookBoxFill className='icon-redes' />
+                                </a>
                             </div>
                         </div>
                     </ul>

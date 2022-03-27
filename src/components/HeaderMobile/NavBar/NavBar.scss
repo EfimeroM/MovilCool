@@ -110,10 +110,14 @@ $heigth-header: 50vh;
               width: 100%;
               display: flex;
               justify-content: space-between;
-              .icon-redes {
+              a{
                 width: 33.33%;
-                font-size: 40px;
-                padding: 5px 10px;
+                .icon-redes {
+                  color: black;
+                  width: 100%;
+                  font-size: 40px;
+                  padding: 5px 10px;
+                }
               }
             }
           }

@@ -91,3 +91,23 @@
 }
 
 /* --------- */
+
+
+@media (max-width: 600px) {
+  .Form__data {
+    margin: -50px auto;
+    width: 90%;
+  }
+
+  .data__input {
+    width: 100%;
+  }
+
+  .Form__info {
+    margin: 150px 0;
+  }
+
+  .info__section {
+
+  }
+}

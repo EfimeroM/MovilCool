@@ -116,3 +116,10 @@
 }
 
 /* ---------- */
+
+@media (max-width: 600px) {
+  .container__SideBar {
+    display: none;
+    width: 100%;
+  }
+}

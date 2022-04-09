@@ -20,7 +20,7 @@ const ItemDetail = ({producto}) => {
           <div className="details__images">
             {/* <img className="side_image" src="./assets/image 30.png" alt="small1" /> */}
             <div className="main_image_container">
-              <img className="main_image" src={imageUrl} alt="big" />
+              <img className="main_image" src={`../${imageUrl}`} alt="big" />
             </div>
             {/* <img className="side_image" src="./assets/image 31.png" alt="small2" />
             <img className="side_image" src="./assets/image 32.png" alt="small3" />

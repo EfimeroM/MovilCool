@@ -9,7 +9,7 @@ const Item = ({producto}) => {
     <div id='item-card-container'>
         <div className='item-card-info'>
             <div className='image'>
-                <img src={imageUrl} alt={nombre} />
+                <img src={`../${imageUrl}`} alt={nombre} />
             </div>
             <h1>{nombre}</h1>
             {

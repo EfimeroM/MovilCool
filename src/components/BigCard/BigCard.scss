@@ -50,6 +50,14 @@
                 h2{
                     font-size: 3vh;
                     color: rgb(92, 92, 92);
+                    display: flex;
+                    align-items: center;
+                    div{
+                        width: 30px;
+                        height: 30px;
+                        margin: 5px;
+                        border-radius: 10px;
+                    }
                 }
             }
             p{
